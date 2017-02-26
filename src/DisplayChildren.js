@@ -53,9 +53,7 @@ class DisplayChildren extends React.Component {
     setStyle() {
         this.setState((prepSate) => {
             return {
-                display: prepSate.display === 'none'
-                    ? 'block'
-                    : 'none'
+                display: prepSate.display === 'none' ? 'block' : 'none'
             }
         });
     }
@@ -72,7 +70,7 @@ class DisplayChildren extends React.Component {
         };
         return (
             <ul >
-                <li onClick={this.setStyle}> {this.props.data.name}</li>
+                <li onClick={this.setStyle}> <a href="#"> {this.props.data.name} </a> </li>
                 <div style={style}>
                   {this.showChildren(this.props.data.children)}
                 </div>
